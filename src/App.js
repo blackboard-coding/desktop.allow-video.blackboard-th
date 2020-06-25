@@ -1,6 +1,6 @@
 import React, { useState, Fragment, useEffect } from 'react';
 import logo from './logo.svg';
-import './App.css';
+// import './App.css';
 import { RoutePrivateStudioRoute, RoutePublicStudioRoute } from '@blackboard-th/routes'
 
 function App() {

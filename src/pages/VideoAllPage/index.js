@@ -22,21 +22,25 @@ function VideoAllPage() {
             redirect: 'follow'
         };
 
-        fetch("https://app.blackboard-th.com/api/v1/my/lesson/", requestOptions)
+        fetch("https://app.blackboard-th.com/api/v1/my/lesson", requestOptions)
             .then(response => response.text())
             .then(result => {
-                let arr_data = [];
-               
+                const arr_data = [];
+
+
                 let json_data = JSON.parse(result);
-                // json_data.data.map(_data => {
-                //     if (_data.status === 0) {
-                //         arr_data.push(_data)
-                //     }
-                // })
+
+                json_data.data.map(_data => {
+                    // if (_data.status === 0) {
+                    arr_data.push(_data)
+
+                    console.log(_data)
+                    // }
+                })
 
                 setData(arr_data)
                 setTotal(arr_data.length)
-                console.log(json_data.data)
+
             })
             .catch(error => console.log('error', error));
 

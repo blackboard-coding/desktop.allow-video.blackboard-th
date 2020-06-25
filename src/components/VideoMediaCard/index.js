@@ -66,7 +66,7 @@ export default function VideoMediaCard(props) {
                             padding: '2px',
                         }}
                         onClick={() => {
-                            history.push(`/videos/${_data.info_id}`)
+                            history.push(`/videos/${_data.id}`)
                             // window.location.reload()
                         }}
                         className={classes.root}>

@@ -26,16 +26,20 @@ class VideoPlayer extends React.Component {
         // we can update the src of the existing player with the new video URL.
         console.log(newProps.video);
 
-        if (newProps.video === undefined) {
-            window.location.reload()
+        if (newProps.video !== undefined) {
+
+            if (newProps.video.mime_type)
+                if (this.player) {
+                    this.player.src({
+                        type: newProps.video.mime_type,
+                        src: newProps.video.video_url
+                    });
+                } else {
+                    window.location.reload();
+                }
         }
 
-        if (this.player) {
-            this.player.src({
-                type: newProps.video.mime_type,
-                src: newProps.video.video_url
-            });
-        }
+
     }
 
     // wrap the player in a div with a `data-vjs-player` attribute
