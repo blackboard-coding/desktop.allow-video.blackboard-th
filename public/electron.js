@@ -15,10 +15,16 @@ function createWindow() {
     },
   })
 
+  // mainWindow.loadURL(
+  //   isDev
+  //     ? 'http://localhost:3000'
+  //     : `file://${path.join(__dirname, '../build/index.html')}`,
+  // )
+
   mainWindow.loadURL(
     isDev
-      ? 'http://localhost:3000'
-      : `file://${path.join(__dirname, '../build/index.html')}`,
+      ? 'http://localhost:3101'
+      : `https://blackboard-backend-ui-react-9ie0murl6.vercel.app`,
   )
 
   mainWindow.on('closed', () => {

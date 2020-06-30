@@ -33,8 +33,15 @@
     "start": "concurrently \"cross-env BROWSER=none yarn react-start\" \"wait-on http://localhost:3000 && electron .\""
   },
   "build": {
-    "appId": "com.blackboard-th.admin",
-    "productName": "Blackboard-TH Manager"
+    "appId": "com.blackboard-th.admin.manager",
+    "productName": "Blackboard-TH Manager",
+    "mac": {
+      "icon": "./public/icons/mac/icon.icns",    
+      "category": "public.app-category.utilities"
+    },
+    "win": {
+      "icon": "./public/icons/win/icon.ico"
+    }
   },
   "eslintConfig": {
     "extends": "react-app"
