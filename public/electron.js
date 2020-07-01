@@ -24,7 +24,7 @@ function createWindow() {
   mainWindow.loadURL(
     isDev
       ? 'http://localhost:3101'
-      : `https://blackboard-backend-ui-react-9ie0murl6.vercel.app`,
+      : `https://blackboard-backend-ui-react.ndevs260340.vercel.app`,
   )
 
   mainWindow.on('closed', () => {
